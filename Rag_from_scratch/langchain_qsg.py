@@ -9,8 +9,15 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.prompts import ChatPromptTemplate
 import os
+import sys
 from langchain_groq import ChatGroq
 
+# Add parent directory to path to import config
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from config import load_config
+
+# Load API keys from config
+config = load_config()
 
 # this is an example of building a RAG system from scratch using langchain. It includes the following steps:
 # 1. Load documents from the web using WebBaseLoader
@@ -20,11 +27,7 @@ from langchain_groq import ChatGroq
 # 5. Define a prompt template for answering questions based on retrieved documents
 # 6. Create a chain that takes a question, retrieves relevant documents, formats them, and passes them
 #    to a language model to generate an answer.
-# Note: you will need to add your own Groq API key to run this code.
-
-os.environ['LANGCHAIN_TRACING_V2'] = 'true'
-os.environ['LANGCHAIN_ENDPOINT'] = 'https://api.smith.langchain.com'
-os.environ['LANGCHAIN_API_KEY'] = "you can add your langchain api key here if you want to use langchain tracing and other features that require api key"
+# Note: Add your API keys in config_local.py
 
 
 prompt = ChatPromptTemplate.from_template("""
@@ -68,7 +71,7 @@ retriever = vectorstore.as_retriever()
 llm = ChatGroq(
     model="llama-3.1-8b-instant",
     temperature=0,
-    api_key="add your groq api key here"
+    api_key=config['GROQ_API_KEY']
 )
 
 # Post-processing

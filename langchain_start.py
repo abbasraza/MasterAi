@@ -3,6 +3,14 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.vectorstores import InMemoryVectorStore
 import os
+import sys
+
+# Add parent directory to path to import config
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from config import load_config
+
+# Load API keys from config
+config = load_config()
 
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
 vector_store = InMemoryVectorStore(embeddings)
@@ -12,10 +20,6 @@ file_path = "./example_data/nke-10k-2023.pdf"
 loader = PyPDFLoader(file_path)
 
 docs = loader.load()
-
-os.environ['LANGCHAIN_TRACING_V2'] = 'true'
-os.environ['LANGCHAIN_ENDPOINT'] = 'https://api.smith.langchain.com'
-os.environ['LANGCHAIN_API_KEY'] = "you can add your langchain api key here if you want to use langchain tracing and other features that require api key"
 
 print(len(docs))
 

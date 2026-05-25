@@ -1,0 +1,15 @@
+"""
+Local configuration file - Copy this to config_local.py and add your actual API keys.
+This file should NOT be committed to git.
+"""
+
+# LangChain Configuration
+LANGCHAIN_TRACING_V2 = 'true'
+LANGCHAIN_ENDPOINT = 'https://api.smith.langchain.com'
+LANGCHAIN_API_KEY = "your-actual-langchain-api-key"
+
+# Groq API Key
+GROQ_API_KEY = "your-actual-groq-api-key"
+
+# OpenAI API Key (if needed)
+OPENAI_API_KEY = "your-actual-openai-api-key"
