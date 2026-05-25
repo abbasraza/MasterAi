@@ -2,6 +2,7 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.vectorstores import InMemoryVectorStore
+import os
 
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
 vector_store = InMemoryVectorStore(embeddings)
@@ -12,6 +13,9 @@ loader = PyPDFLoader(file_path)
 
 docs = loader.load()
 
+os.environ['LANGCHAIN_TRACING_V2'] = 'true'
+os.environ['LANGCHAIN_ENDPOINT'] = 'https://api.smith.langchain.com'
+os.environ['LANGCHAIN_API_KEY'] = "you can add your langchain api key here if you want to use langchain tracing and other features that require api key"
 
 print(len(docs))
 
@@ -40,7 +44,7 @@ results = vector_store.similarity_search(
 )
 
 print(results[0])
-
+'''
 results = vector_store.similarity_search(
     "How many retail stores does Nike have outside USA?"
 )
@@ -75,3 +79,23 @@ results = vector_store.similarity_search_by_vector(
     query_vector
 )
 print(results[0])
+
+print("\nNow trying retriever\n")
+retriever = vector_store.as_retriever(
+    search_type="similarity",
+    search_kwargs={"k": 1},
+)
+
+retriever = vector_store.as_retriever(
+    search_type="mmr",
+    search_kwargs={"k": 1},
+)
+
+results = retriever.batch(
+    [
+        "How many distribution centers does Nike have in the US?",
+        "How many retail stores does Nike have outside USA?",
+    ],
+)
+print(results)
+'''
