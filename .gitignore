@@ -219,3 +219,32 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ChromaDB
+chroma/
+chroma_db/
+
+# FAISS
+*.faiss
+*.index
+
+# LanceDB
+.lancedb/
+*.lance
+
+# Milvus local data
+milvus/
+etcd/
+minio/
+
+# Qdrant local storage
+qdrant_storage/
+storage/
+
+# Weaviate local data
+weaviate_data/
+
+# SQLite-based vector stores
+*.db
+*.sqlite
+*.sqlite3
