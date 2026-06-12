@@ -112,8 +112,8 @@ def build_rag_chain(source_path: Path):
 
         # ── Smaller chunks: lab tables are compact, dense text ──────────────
         splitter = RecursiveCharacterTextSplitter(
-            chunk_size=500,       # ← was 1000
-            chunk_overlap=100,    # ← was 200
+            chunk_size=2000,
+            chunk_overlap=0,
         )
         chunks = splitter.split_documents(documents)
         vector_store.add_documents(documents=chunks)
