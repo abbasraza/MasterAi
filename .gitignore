@@ -248,3 +248,5 @@ weaviate_data/
 *.db
 *.sqlite
 *.sqlite3
+
+Rag_from_scratch/chroma_medical_db/
