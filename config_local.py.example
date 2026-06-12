@@ -1,4 +1,21 @@
 """
+Local configuration file - copy this to config_local.py and fill in your real keys.
+Do not commit config_local.py.
+"""
+
+LANGCHAIN_TRACING_V2 = 'true'
+LANGCHAIN_ENDPOINT = 'https://api.smith.langchain.com'
+LANGCHAIN_API_KEY = 'your-langchain-api-key-here'
+
+AZURE_OPENAI_ENDPOINT = 'https://cloudrnd-foundry.cognitiveservices.azure.com/'
+AZURE_OPENAI_API_KEY = 'your-azure-openai-api-key-here'
+AZURE_OPENAI_CHAT_DEPLOYMENT = 'gpt-4o'
+AZURE_OPENAI_CHAT_API_VERSION = '2025-01-01-preview'
+AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT = 'text-embedding-3-small'
+AZURE_OPENAI_EMBEDDINGS_API_VERSION = '2023-05-15'
+
+GROQ_API_KEY = 'your-groq-api-key-here'
+OPENAI_API_KEY = 'your-openai-api-key-here'"""
 Local configuration file - Copy this to config_local.py and add your actual API keys.
 This file should NOT be committed to git.
 """
