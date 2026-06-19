@@ -1,0 +1,57 @@
+{
+  "report_date": "20/04/2026",
+  "collection_date": "",
+  "source_file": "File (5).pdf",
+  "sections": {
+    "BIOCHEMISTRY": [
+      {
+        "test_name": "LFTs",
+        "value": "",
+        "unit": "",
+        "reference_range": "",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "BILIRUBIN TOTAL",
+        "value": "0.5",
+        "unit": "mg/dl",
+        "reference_range": "0.1 ­ 1.1",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "BILIRUBIN DIRECT",
+        "value": "0.1",
+        "unit": "mg/dl",
+        "reference_range": "UPTO 0.25",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "BILIRUBIN INDIRECT",
+        "value": "0.4",
+        "unit": "mg/dl",
+        "reference_range": "0.1 ­ 0.75",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "SGPT (ALT)",
+        "value": "34",
+        "unit": "U/L",
+        "reference_range": "MEN: up to 45 WOMEN: up to 34",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "ALKALINE PHOSPHATASE",
+        "value": "356",
+        "unit": "U/L",
+        "reference_range": "ADULT < 270 CHILD < 645",
+        "flag": "",
+        "is_abnormal": false
+      }
+    ]
+  }
+}

@@ -3,11 +3,8 @@ import pytesseract
 from PIL import Image
 import fitz  # PyMuPDF
 
-input_dir = "/home/abbas/Downloads/Ami_fever_2026-20260612T142009Z-3-001/images"
-output_dir = "/home/abbas/Downloads/Ami_fever_2026-20260612T142009Z-3-001/pdfs"
-
-
-
+input_dir = "/home/abbas/Downloads/Images-20260614T073049Z-3-001/Images/failed_downloads"
+output_dir = "/home/abbas/Downloads/Images-20260614T073049Z-3-001/Images/failed_downloads/pdfs"
 
 def extract_text(pdf_path):
     doc = fitz.open(pdf_path)
@@ -34,7 +31,10 @@ for file in os.listdir(input_dir):
         print(f"OCR Converted: {file} → {pdf_name}")
         text = extract_text(pdf_path)  # Optional: Extract text to verify OCR output
         print(f"Extracted Text: {text}...")  # Print the first 100 characters of the extracted text
+        # prompt do you want to continue with this file or skip it? (y/n)
+        cont = input("Continue with this file? (y/n): ")
+        if cont.lower() != 'y':
+            os.remove(pdf_path)
+            print(f"Skipped and removed: {pdf_name}")
 
 print("Done ✅")
-text = extract_text("/home/abbas/Downloads/Ami_fever_2026-20260612T142009Z-3-001/pdfs/high_quality_report.pdf")
-print(f"Another text: {text}...")  # Print the first 100 characters of the extracted text

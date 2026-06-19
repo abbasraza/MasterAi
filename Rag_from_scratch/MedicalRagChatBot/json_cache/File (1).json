@@ -1,0 +1,17 @@
+{
+  "report_date": "04/07/2025",
+  "collection_date": "",
+  "source_file": "File (1).pdf",
+  "sections": {
+    "BIOCHEMISTRY": [
+      {
+        "test_name": "SERUM CREATININE",
+        "value": "1.0",
+        "unit": "mg/dl",
+        "reference_range": "MEN: 0.7 ­ 1.2 WOMEN: 0.6 ­ 0.9",
+        "flag": "",
+        "is_abnormal": false
+      }
+    ]
+  }
+}

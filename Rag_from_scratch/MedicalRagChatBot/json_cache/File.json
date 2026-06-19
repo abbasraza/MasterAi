@@ -1,0 +1,153 @@
+{
+  "report_date": "04/07/2025",
+  "collection_date": "",
+  "source_file": "File.pdf",
+  "sections": {
+    "URINE C/E": [
+      {
+        "test_name": "URINE C/E",
+        "value": "",
+        "unit": "",
+        "reference_range": "",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "PH",
+        "value": "5.0",
+        "unit": "",
+        "reference_range": "Neutral",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Color",
+        "value": "YELLOW",
+        "unit": "",
+        "reference_range": "­",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Specific Gravity",
+        "value": "1.020",
+        "unit": "",
+        "reference_range": "­",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Protein",
+        "value": "NIL",
+        "unit": "",
+        "reference_range": "­",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Glucose",
+        "value": "NIL",
+        "unit": "",
+        "reference_range": "­",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Bilirubin",
+        "value": "NIL",
+        "unit": "",
+        "reference_range": "­",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Urobilirubin",
+        "value": "Normal",
+        "unit": "",
+        "reference_range": "­",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Blood",
+        "value": "NIL",
+        "unit": "",
+        "reference_range": "",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Pus Cells",
+        "value": "1­2",
+        "unit": "",
+        "reference_range": "­",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Red Blood Cells",
+        "value": "NIL",
+        "unit": "",
+        "reference_range": "­",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Epithelial Cells",
+        "value": "NIL",
+        "unit": "",
+        "reference_range": "­",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Granular cast",
+        "value": "NIL",
+        "unit": "",
+        "reference_range": "­",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Bacteria",
+        "value": "NIL",
+        "unit": "",
+        "reference_range": "­",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Yeast Cells",
+        "value": "NIL",
+        "unit": "",
+        "reference_range": "­",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Calcium oxalate",
+        "value": "NIL",
+        "unit": "",
+        "reference_range": "­",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Uric Acid:",
+        "value": "RARE",
+        "unit": "",
+        "reference_range": "­",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Amorphous urates",
+        "value": "NIL",
+        "unit": "",
+        "reference_range": "­",
+        "flag": "",
+        "is_abnormal": false
+      }
+    ]
+  }
+}

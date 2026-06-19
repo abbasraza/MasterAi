@@ -1,0 +1,30 @@
+{
+    "patient_info": {
+        "name": "Miss"
+    },
+    "sections": [
+        {
+            "section_name": "Section_2",
+            "tests": [
+                {
+                    "value": "*4706976*\n4706976\n02-May-2025 12:49 PM"
+                },
+                {
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "section_name": "Section_3",
+            "tests": [
+                {
+                    "value": "*4706976*\n4706976\n02-May-2025 12:50 PM"
+                },
+                {
+                    "value": ""
+                }
+            ]
+        }
+    ],
+    "raw_text": "\u2193\nRenal Function Test\nResult\n*4706976*\n4706976\n02-May-2025 12:49 PM\nTest\nNormal Range\nUnit\nUrea\n10\n\u00a0-\u00a0\n45\nmg/dl\n37\nBUN (Blood Urea Nitrogen)\n10\n\u00a0-\u00a0\n20\nmg/dl\n17\nCreatinine\n0.6\n\u00a0-\u00a0\n0.9\nmg/dl\n0.9\nLiver Function Test\nResult\n*4706976*\n4706976\n02-May-2025 12:49 PM\nTest\nNormal Range\nUnit\nTotal Bilirubin\n0.2\n\u00a0-\u00a0\n1.2\nmg/dl\n0.7\nDirect Bilirubin\n0.3\n\u00a0-\u00a0\n0.8\nmg/dl\n0.2\nIndirect Bilirubin\n0.2\n\u00a0-\u00a0\n0.8\nmg/dl\n0.5\nSGPT (ALT)\n5\n\u00a0-\u00a0\n32\nU/L\n21\nAlkaline phosphatase (ALP)\n40\n\u00a0-\u00a0\n350\nU/L\n116\nDepartment of Chemical Pathology\nResult\n*4706976*\n4706976\n02-May-2025 12:50 PM\nTest\nNormal Range\nUnit\nBlood Glucose Random\n70\n\u00a0-\u00a0\n140\nmg/dl\n101\nPatient No:\n2114847\u00a0\n*2114847*\nT/R ID:\n2000230\u00a0\n*2000230*\nT/R No:\nTR250502-449-01-11\nPatient Name:\nMiss\nNASEEM ZAHRA\nPhone:\n923466332723\nCollection Time:\n02-May-2025 10:46 AM\nCNIC:\nAge/Sex:\n60(Y)\n/\nFemale\nSpecimen:\nTaken in lab\nPerformed Time:\n02-May-2025 12:49 PM\nMR No:\n104843\nRegistered at:\nJinnah Lab_Main\nReferred By:\nSelf\nElectronically verified report. No signature(s) require"
+}

@@ -154,7 +154,7 @@ if __name__ == "__main__":
     else:
         print("Reused existing Chroma store ./chroma_medical_db (no re-embedding).")
 
-    print("\n🩺 Medical Records Assistant")
+    print("\n Medical Records Assistant")
     print("Ask about tests, results, dates, or abnormal findings.")
     print("Type 'exit' or 'quit' to stop.\n")
 

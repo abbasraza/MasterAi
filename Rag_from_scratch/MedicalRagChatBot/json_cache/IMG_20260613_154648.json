@@ -1,0 +1,18 @@
+{
+  "report_date": "27-May-2025",
+  "collection_date": "26-May-2025",
+  "source_file": "IMG_20260613_154648.pdf",
+  "sections": {
+    "Department of Hematology": [
+      {
+        "test_name": "ESR (Erythrocyte Sedimentation Rate)",
+        "value": "60",
+        "unit": "mm/1st H",
+        "reference_range": "56436 - 26",
+        "flag": "low",
+        "is_abnormal": true,
+        "comment": "Result extracted from chart-based PDF report."
+      }
+    ]
+  }
+}

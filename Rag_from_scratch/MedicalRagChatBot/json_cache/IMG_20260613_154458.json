@@ -1,0 +1,169 @@
+{
+  "report_date": "05-Jun-2025",
+  "collection_date": "04-Jun-2025",
+  "source_file": "IMG_20260613_154458.pdf",
+  "sections": {
+    "Department of Hematology": [
+      {
+        "test_name": "Hb",
+        "value": "11.3",
+        "unit": "g/dl",
+        "reference_range": "11 - 14.5",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Total RBC",
+        "value": "4.1",
+        "unit": "x10^12/l",
+        "reference_range": "3.61 - 5.2",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "HCT",
+        "value": "36",
+        "unit": "%",
+        "reference_range": "34.5 - 45.4",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "MCV",
+        "value": "89",
+        "unit": "fl",
+        "reference_range": "78.1 - 95.3",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "MCH",
+        "value": "28",
+        "unit": "pg",
+        "reference_range": "25.3 - 31.7",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "MCHC",
+        "value": "31",
+        "unit": "g/dl",
+        "reference_range": "30 - 34",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "RDW CV %",
+        "value": "14.8",
+        "unit": "%",
+        "reference_range": "11.5 - 14.5",
+        "flag": "high",
+        "is_abnormal": true
+      },
+      {
+        "test_name": "Platelet Count",
+        "value": "272",
+        "unit": "x10^9/l",
+        "reference_range": "150 - 430",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "MPV fl",
+        "value": "10.8",
+        "unit": "fl",
+        "reference_range": "7 - 11",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "WBC Count (TLC)",
+        "value": "6.6",
+        "unit": "x10^9/l",
+        "reference_range": "4.6 - 10.8",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Neutrophils",
+        "value": "52.6",
+        "unit": "%",
+        "reference_range": "35.0 - 76.0",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Lymphocytes",
+        "value": "37.6",
+        "unit": "%",
+        "reference_range": "18.0 - 45.0",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Monocytes",
+        "value": "8.1",
+        "unit": "%",
+        "reference_range": "4.0 - 10.0",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Eosinophils",
+        "value": "1.5",
+        "unit": "%",
+        "reference_range": "1.0 - 6.0",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Basophils",
+        "value": "0.2",
+        "unit": "%",
+        "reference_range": "Less Than 1.0",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Abs. Neutrophils",
+        "value": "3.49",
+        "unit": "x10^9/l",
+        "reference_range": "2.00 - 7.00",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Abs. Lymphocytes",
+        "value": "2.49",
+        "unit": "x10^9/l",
+        "reference_range": "1.00 - 3.00",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Abs. Monocytes",
+        "value": "0.54",
+        "unit": "x10^9/l",
+        "reference_range": "0.20 - 1.00",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Abs. Eosinophils",
+        "value": "0.10",
+        "unit": "x10^9/l",
+        "reference_range": "0.02 - 0.50",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Abs. Basophils",
+        "value": "0.01",
+        "unit": "x10^9/l",
+        "reference_range": "Less Than 0.11",
+        "flag": "",
+        "is_abnormal": false
+      }
+    ]
+  }
+}

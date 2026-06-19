@@ -26,7 +26,7 @@ qreader = QReader()
 from playwright.sync_api import sync_playwright
 
 def download_via_playwright(url, output_path):
-    print(f"🌐 Playwright fallback for: {url}")
+    print(f" Playwright fallback for: {url}")
 
     try:
         with sync_playwright() as p:
@@ -43,24 +43,24 @@ def download_via_playwright(url, output_path):
 
             browser.close()
 
-        print("✅ Saved via Playwright:", output_path)
+        print("Saved via Playwright:", output_path)
         return True
 
     except Exception as e:
-        print("❌ Playwright failed:", e)
+        print(" Playwright failed:", e)
         return False
 
 # -------- Helper: Robust download --------
 def robust_download(url):
     try:
-        print(f"⬇️ Trying: {url}")
+        print(f" Trying: {url}")
         return requests.get(
             url,
             headers={"User-Agent": "Mozilla/5.0"},
             timeout=15
         )
     except requests.exceptions.Timeout:
-        print("⚠️ Timeout occurred")
+        print(" Timeout occurred")
 
         # Switch protocol
         if url.startswith("http://"):
@@ -68,7 +68,7 @@ def robust_download(url):
         elif url.startswith("https://"):
             url = url.replace("https://", "http://")
 
-        print(f"🔁 Retrying: {url}")
+        print(f" Retrying: {url}")
         return requests.get(
             url,
             headers={"User-Agent": "Mozilla/5.0"},
@@ -92,13 +92,13 @@ for filename in os.listdir(INPUT_DIR):
         continue
 
     img_path = os.path.join(INPUT_DIR, filename)
-    print(f"\n📷 Processing: {filename}")
+    print(f"\n Processing: {filename}")
     tiny_url = None  # Initialize tiny_url for logging in case of early failure
     try:
         image = cv2.imread(img_path)
 
         if image is None:
-            print("❌ Image load failed")
+            print(" Image load failed")
             shutil.move(img_path, os.path.join(NO_QR_DIR, filename))
             continue
 
@@ -106,12 +106,12 @@ for filename in os.listdir(INPUT_DIR):
 
         # -------- Case 1: No QR --------
         if not decoded_texts:
-            print("❌ No QR found")
+            print(" No QR found")
             shutil.move(img_path, os.path.join(NO_QR_DIR, filename))
             continue
 
         tiny_url = decoded_texts[0]
-        print("🔗 TinyURL:", tiny_url)
+        print(" TinyURL:", tiny_url)
 
         # -------- Get redirect URL --------
         # -------- Get redirect URL --------
@@ -131,11 +131,11 @@ for filename in os.listdir(INPUT_DIR):
             )
 
         except Exception as e:
-            print("⚠️ HEAD request failed:", e)
+            print(" HEAD request failed:", e)
 
         # -------- Fallback if no redirect --------
         if not redirect_url:
-            print("⚠️ No redirect from HEAD, trying GET fallback...")
+            print(" No redirect from HEAD, trying GET fallback...")
 
             try:
                 get_resp = requests.get(
@@ -146,21 +146,21 @@ for filename in os.listdir(INPUT_DIR):
                 )
 
                 redirect_url = get_resp.url
-                print("✅ Resolved via GET:", redirect_url)
+                print("Resolved via GET:", redirect_url)
 
             except Exception as e:
-                print("❌ Failed to resolve URL:", e)
+                print(" Failed to resolve URL:", e)
                 log_failed_url(filename, tiny_url, tiny_url)
                 shutil.move(img_path, os.path.join(FAILED_DIR, filename))
                 continue
 
-        print("➡️ Final URL:", redirect_url)
+        print(" Final URL:", redirect_url)
 
         # -------- Download --------
         response = robust_download(redirect_url)
 
         if response.status_code != 200:
-            print(f"❌ Download failed ({response.status_code})")
+            print(f" Download failed ({response.status_code})")
             log_failed_url(filename, redirect_url, tiny_url)
             shutil.move(img_path, os.path.join(FAILED_DIR, filename))
             continue
@@ -172,7 +172,7 @@ for filename in os.listdir(INPUT_DIR):
         # -------- Optional PDF check --------
         content_type = response.headers.get("Content-Type", "")
         if "pdf" not in content_type.lower():
-            print("⚠️ Not a PDF (likely HTML)")
+            print(" Not a PDF (likely HTML)")
        
             # success = download_via_playwright(redirect_url, pdf_path)
         
@@ -188,16 +188,16 @@ for filename in os.listdir(INPUT_DIR):
         with open(pdf_path, "wb") as f:
             f.write(response.content)
 
-        print(f"✅ Saved PDF: {pdf_name}")
+        print(f"Saved PDF: {pdf_name}")
 
         # Move to good_images
         shutil.move(img_path, os.path.join(GOOD_DIR, filename))
 
     except Exception as e:
-        print("❌ Error:", e)
+        print(" Error:", e)
         log_failed_url(filename, "UNKNOWN_ERROR", tiny_url)
         shutil.move(img_path, os.path.join(FAILED_DIR, filename))
 
 
-print("\n✅ Processing complete!")
-print(f"📄 Failed URLs logged in: {FAILED_URLS_FILE}")
+print("\nProcessing complete!")
+print(f" Failed URLs logged in: {FAILED_URLS_FILE}")

@@ -1,0 +1,121 @@
+{
+  "report_date": "26/07/2025",
+  "collection_date": "",
+  "source_file": "File (2).pdf",
+  "sections": {
+    "HAEMATOLOGY": [
+      {
+        "test_name": "CBC With ESR",
+        "value": "",
+        "unit": "",
+        "reference_range": "",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Haemoglobin",
+        "value": "10.8",
+        "unit": "g/dl",
+        "reference_range": "M: 13.5 ­ 17.5, F: 11.5 ­14.0",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "ESR",
+        "value": "65",
+        "unit": "mm/1st hr",
+        "reference_range": "0­20",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "White Blood Cell (WBC/TLC)",
+        "value": "5500",
+        "unit": "/ cu mm",
+        "reference_range": "4000 ­ 11000",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Red Blood Cell (RBC)",
+        "value": "3.7",
+        "unit": "*10^12/l",
+        "reference_range": "4.5 ­ 6.5",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Platelets Count",
+        "value": "195000",
+        "unit": "/cu mm",
+        "reference_range": "150000 ­ 400000",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Hematocrit (HCT)",
+        "value": "31.4",
+        "unit": "%",
+        "reference_range": "40.0 ­ 52.0",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Mean Cell Volume (MCV)",
+        "value": "85.1",
+        "unit": "fl",
+        "reference_range": "76.0 ­ 96.0",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Mean Cell Hemoglobin (MCH)",
+        "value": "29.3",
+        "unit": "pg",
+        "reference_range": "25.0 ­ 35.0",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Mean Cell Hb Conc (MCHC)",
+        "value": "34.5",
+        "unit": "g/dl",
+        "reference_range": "31.0 ­ 38.0",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Neutrophils",
+        "value": "50",
+        "unit": "%",
+        "reference_range": "40 ­ 75",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Lymphocytes",
+        "value": "40",
+        "unit": "%",
+        "reference_range": "Adult: 25 ­ 40, Child: 45­ 70",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Monocytes",
+        "value": "6",
+        "unit": "%",
+        "reference_range": "2 ­ 10",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Eosinophils",
+        "value": "4",
+        "unit": "%",
+        "reference_range": "Adult: 01 ­ 05, Child: 02 ­ 07",
+        "flag": "",
+        "is_abnormal": false
+      }
+    ]
+  }
+}

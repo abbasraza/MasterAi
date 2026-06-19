@@ -1,0 +1,92 @@
+{
+  "patient_info": {},
+  "sections": [
+    {
+      "section_name": "General Lab Tests",
+      "tests": [
+        {
+          "test_name": "Urea",
+          "value": "37",
+          "unit": "mg/dl",
+          "reference_range": "- 45",
+          "flag": null,
+          "is_abnormal": false
+        },
+        {
+          "test_name": "BUN (Blood Urea Nitrogen)",
+          "value": "17",
+          "unit": "mg/dl",
+          "reference_range": "- 20",
+          "flag": null,
+          "is_abnormal": false
+        },
+        {
+          "test_name": "Creatinine",
+          "value": "0.9",
+          "unit": "mg/dl",
+          "reference_range": "- 0.9",
+          "flag": null,
+          "is_abnormal": false
+        }
+      ]
+    },
+    {
+      "section_name": "General Lab Tests",
+      "tests": [
+        {
+          "test_name": "Total Bilirubin",
+          "value": "0.7",
+          "unit": "mg/dl",
+          "reference_range": "- 1.2",
+          "flag": null,
+          "is_abnormal": false
+        },
+        {
+          "test_name": "Direct Bilirubin",
+          "value": "0.2",
+          "unit": "mg/dl",
+          "reference_range": "- 0.8",
+          "flag": null,
+          "is_abnormal": false
+        },
+        {
+          "test_name": "Indirect Bilirubin",
+          "value": "0.5",
+          "unit": "mg/dl",
+          "reference_range": "- 0.8",
+          "flag": null,
+          "is_abnormal": false
+        },
+        {
+          "test_name": "SGPT (ALT)",
+          "value": "21",
+          "unit": "U/L",
+          "reference_range": "- 32",
+          "flag": null,
+          "is_abnormal": false
+        },
+        {
+          "test_name": "Alkaline phosphatase (ALP)",
+          "value": "116",
+          "unit": "U/L",
+          "reference_range": "- 350",
+          "flag": null,
+          "is_abnormal": false
+        }
+      ]
+    },
+    {
+      "section_name": "General Lab Tests",
+      "tests": [
+        {
+          "test_name": "Blood Glucose Random",
+          "value": "101",
+          "unit": "mg/dl",
+          "reference_range": "140",
+          "flag": null,
+          "is_abnormal": false
+        }
+      ]
+    }
+  ]
+}
