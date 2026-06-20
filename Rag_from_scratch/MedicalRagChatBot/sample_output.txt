@@ -1,0 +1,1157 @@
+(venv) abbas@teo-HP-ProBook:~/work/MasterAi/Rag_from_scratch/MedicalRagChatBot$ python main.py --source /home/abbas/Downloads/Ami_fever_2026-20260612T142009Z-3-001/all_pdfs/ --persist-dir chroma_db_from_markdown
+/home/abbas/work/MasterAi/Rag_from_scratch/MedicalRagChatBot/chatbot/retrieval/vector_store.py:9: LangChainDeprecationWarning: The class `Chroma` was deprecated in LangChain 0.2.9 and will be removed in 1.0. An updated version of the class exists in the `langchain-chroma package and should be used instead. To use it run `pip install -U `langchain-chroma` and import as `from `langchain_chroma import Chroma``.
+  self.store = Chroma(
+18:08:56 | INFO     | Reusing store: 375 docs
+/home/abbas/work/MasterAi/Rag_from_scratch/MedicalRagChatBot/chatbot/chatbot.py:113: LangChainDeprecationWarning: RunnableWithMessageHistory is deprecated. Use LangGraph's built-in persistence instead.
+  self.chain = self._build_chain()
+
+Medical Records Assistant
+Type exit or quit to stop.
+Token usage shown after each answer.
+
+Question: all tests which are abnormal or out of range
+
+================================================================================
+DEBUG | Question: all tests which are abnormal or out of range | Chunks: 20
+================================================================================
+
+--- Chunk 1 ---
+source=ami_mtb_dna.pdf | date=None | type=markdown_chunk
+## TEST RESULTS
+
+--- Chunk 2 ---
+source=cbc_diff_ami.pdf | date=None | type=markdown_chunk
+## Hematology  
+TEST
+
+--- Chunk 3 ---
+source=IMG_20260613_155821.pdf | date=None | type=markdown_chunk
+## 96 Normal  
+mg/dL  
+A blood sample requires fasting of 12 hours. High blood glucose level can be found in people with  diabetes, critical medical conditions, as well as pregnant women with gestational diabetes. Low blood glucose level commonly affects people with diabetes, rarely it can also occur as a result of other underlying conditions.  
+Note: Change in reference values is effective from 24 August 2021.  
+Reference : American Diabetes Association (ADA). Standards of medical care in diabetes - 2017  
+Diabetes Mellitus (&gt;126)  
+Prediabetes (100 - 126)  
+Normal (70 - 99)  
+Hypoglycemia (&lt;70)  
+(56407-30-04)  
+30/04/2026  
+80  
+90  
+100  
+110  
+96  
+Dr.Mubashar Razzaq Khan Consultant Pathologist  
+www.chughtailab.com  
+info@chughtailab.com  
+Saleemi Chowk Satiana Road Faisalabad  
+Dr. N. A. Malik MBBS (Pb) , M. Phil. Consultant Haematologist  
+Dr. Ayisha Imran MBBS , FCPS  
+Consultant Haematologist  
+Dr. M. Dilawar Khan MBBS ,MCPS ,FCPS.  
+Consultant Chemical Pathologist  
+Dr. Omar Chughtai MBBS ,MD, FCAP Diplomate American Board of Anatomic and Clinical Pathology Consultant Pathologist  
+Dr. A . S. Chughtai MBBS , MIAC , M.Phil.,  
+FCPS , FRC PathConsultant Pathologist  
+Registration Location:  
+Jhang Road, Chiniot Registration Date:  
+30-Apr-2026 08:50  
+Reference: Blue Card - Counter 20% Consultant:  
+.SELF  
+Case Number: 56401-25-16591909 Patient Number:  
+56407-30-04  
+Collection DateTime:  
+<!-- image -->  
+30-Apr-2026 08:50  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Patient Detail:  
+Nasim Zahra .  
+Age/Sex :  
+60 (Y) / F  
+Note :  
+, , ,
+
+--- Chunk 4 ---
+source=IMG_20260613_161444.pdf | date=None | type=markdown_chunk
+## 96 Normal  
+mg/dL  
+A blood sample requires fasting of 12 hours. High blood glucose level can be found in people with  diabetes, critical medical conditions, as well as pregnant women with gestational diabetes. Low blood glucose level commonly affects people with diabetes, rarely it can also occur as a result of other underlying conditions.  
+Note: Change in reference values is effective from 24 August 2021.  
+Reference : American Diabetes Association (ADA). Standards of medical care in diabetes - 2017  
+Diabetes Mellitus (&gt;126)  
+Prediabetes (100 - 126)  
+Normal (70 - 99)  
+Hypoglycemia (&lt;70)  
+(56407-30-04)  
+30/04/2026  
+80  
+90  
+100  
+110  
+96  
+Dr.Mubashar Razzaq Khan Consultant Pathologist  
+www.chughtailab.com  
+info@chughtailab.com  
+Saleemi Chowk Satiana Road Faisalabad  
+Dr. N. A. Malik MBBS (Pb) , M. Phil. Consultant Haematologist  
+Dr. Ayisha Imran MBBS , FCPS  
+Consultant Haematologist  
+Dr. M. Dilawar Khan MBBS ,MCPS ,FCPS.  
+Consultant Chemical Pathologist  
+Dr. Omar Chughtai MBBS ,MD, FCAP Diplomate American Board of Anatomic and Clinical Pathology Consultant Pathologist  
+Dr. A . S. Chughtai MBBS , MIAC , M.Phil.,  
+FCPS , FRC PathConsultant Pathologist  
+Registration Location:  
+Jhang Road, Chiniot Registration Date:  
+30-Apr-2026 08:50  
+Reference: Blue Card - Counter 20% Consultant:  
+.SELF  
+Case Number: 56401-25-16591909 Patient Number:  
+56407-30-04  
+Collection DateTime:  
+<!-- image -->  
+30-Apr-2026 08:50  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Patient Detail:  
+Nasim Zahra .  
+Age/Sex :  
+60 (Y) / F  
+Note :  
+, , ,
+
+--- Chunk 5 ---
+source=File (5).pdf | date=None | type=markdown_chunk
+## BIOCHEMISTRY  
+| Test                 |   Result | Unit   | Normal Range                  |
+|----------------------|----------|--------|-------------------------------|
+| LFTs                 |          |        |                               |
+| BILIRUBIN TOTAL      |      0.5 | mg/dl  | 0.1  1.1                     |
+| BILIRUBIN DIRECT     |      0.1 | mg/dl  | UPTO 0.25                     |
+| BILIRUBIN INDIRECT   |      0.4 | mg/dl  | 0.1  0.75                    |
+| SGPT (ALT)           |       34 | U/L    | MEN: up to 45 WOMEN: up to 34 |
+| ALKALINE PHOSPHATASE |      356 | U/L    | ADULT < 270 CHILD < 645       |  
+PATHOLOGIST Dr.GhulamShabbir  
+<!-- image -->  
+M.B.B.S. (Pb) D.C.Path. (Pb) Ex.Demonstrator,PathologyPunjabMedicalCollege,Faisalabad. Ex.PathologistAlliedHospital,FaisalabadD.H.Q.Hospital,Chiniot Dr.SafdarAli M.Sc.M.Phil., Ph.D.(Biochemistry) Ex.Biochemist,K.E.MedicalCollege,Lahore.PunjabMedical College,Faisalabad. ProfessorOfBiochemistry,SargodhaMedicalCollege,Sargodha.  
+<!-- image -->  
+<!-- image -->  
+TrackOnline  
+<!-- image -->
+
+--- Chunk 6 ---
+source=File (3).pdf | date=None | type=markdown_chunk
+## BIOCHEMISTRY  
+| Test                 |   Result | Unit   | Normal Range                  |
+|----------------------|----------|--------|-------------------------------|
+| LFTs                 |          |        |                               |
+| BILIRUBIN TOTAL      |      0.5 | mg/dl  | 0.1  1.1                     |
+| BILIRUBIN DIRECT     |      0.1 | mg/dl  | UPTO 0.25                     |
+| BILIRUBIN INDIRECT   |      0.4 | mg/dl  | 0.1  0.75                    |
+| SGPT (ALT)           |       34 | U/L    | MEN: up to 45 WOMEN: up to 34 |
+| ALKALINE PHOSPHATASE |      356 | U/L    | ADULT < 270 CHILD < 645       |  
+PATHOLOGIST Dr.GhulamShabbir  
+<!-- image -->  
+M.B.B.S. (Pb) D.C.Path. (Pb) Ex.Demonstrator,PathologyPunjabMedicalCollege,Faisalabad. Ex.PathologistAlliedHospital,FaisalabadD.H.Q.Hospital,Chiniot Dr.SafdarAli M.Sc.M.Phil., Ph.D.(Biochemistry) Ex.Biochemist,K.E.MedicalCollege,Lahore.PunjabMedical College,Faisalabad. ProfessorOfBiochemistry,SargodhaMedicalCollege,Sargodha.  
+<!-- image -->  
+<!-- image -->  
+TrackOnline  
+<!-- image -->
+
+--- Chunk 7 ---
+source=File (4).pdf | date=None | type=markdown_chunk
+## BIOCHEMISTRY  
+| Test                 |   Result | Unit   | Normal Range                  |
+|----------------------|----------|--------|-------------------------------|
+| LFTs                 |          |        |                               |
+| BILIRUBIN TOTAL      |      0.5 | mg/dl  | 0.1  1.1                     |
+| BILIRUBIN DIRECT     |      0.1 | mg/dl  | UPTO 0.25                     |
+| BILIRUBIN INDIRECT   |      0.4 | mg/dl  | 0.1  0.75                    |
+| SGPT (ALT)           |       34 | U/L    | MEN: up to 45 WOMEN: up to 34 |
+| ALKALINE PHOSPHATASE |      356 | U/L    | ADULT < 270 CHILD < 645       |  
+PATHOLOGIST Dr.GhulamShabbir  
+<!-- image -->  
+M.B.B.S. (Pb) D.C.Path. (Pb) Ex.Demonstrator,PathologyPunjabMedicalCollege,Faisalabad. Ex.PathologistAlliedHospital,FaisalabadD.H.Q.Hospital,Chiniot Dr.SafdarAli M.Sc.M.Phil., Ph.D.(Biochemistry) Ex.Biochemist,K.E.MedicalCollege,Lahore.PunjabMedical College,Faisalabad. ProfessorOfBiochemistry,SargodhaMedicalCollege,Sargodha.  
+<!-- image -->  
+<!-- image -->  
+TrackOnline  
+<!-- image -->
+
+--- Chunk 8 ---
+source=File.pdf | date=None | type=markdown_chunk
+## URINEC/E  
+| Test                    | Result   | Unit   | Normal Range   |
+|-------------------------|----------|--------|----------------|
+| URINE C/E               |          |        |                |
+| PH                      | 5.0      |        | Neutral        |
+| Physical Examination    |          |        |                |
+| Color                   | YELLOW   |        |               |
+| Turbidity               | CLEAR    |        |               |
+| Deposit                 | NIL      |        |               |
+| Specific Gravity        | 1.020    |        |               |
+| Chemical Examination    |          |        |                |
+| Protein                 | NIL      |        |               |
+| Glucose                 | NIL      |        |               |
+| Bilirubin               | NIL      |        |               |
+| Urobilirubin            | Normal   |        |               |
+| Blood                   | NIL      |        |                |
+| Microscopic Examination |          |        |                |
+| Pus Cells               | 12      |        |               |
+| Red Blood Cells         | NIL      |        |               |
+| Epithelial Cells        | NIL      |        |               |
+| Granular cast           | NIL      |        |               |
+| Bacteria                | NIL      |        |               |
+| Yeast Cells             | NIL      |        |               |
+| Calcium oxalate         | NIL      |        |               |
+| Uric Acid:              | RARE     |        |               |
+| Amorphous urates        | NIL      |        |               |
+
+--- Chunk 9 ---
+source=ami_fungus_koh.pdf | date=None | type=markdown_chunk
+## TEST
+
+--- Chunk 10 ---
+source=PT_ami.pdf | date=None | type=markdown_chunk
+## Expected INR values for selected conditions  
+-----------------------------------  
+* Prevention and treatment of venous thromboembolism 2.0 - 3.0  
+* Prosthetic mechanical heart valves 2.5 - 3.5  
+AutoVerified  
+Dr.Imran N. Ahmad Dr.Ayesha Junaid  
+Director Labs (Enterprise)  
+Consultant Pathologist  
+Professor of Pathology  
+MBBS,MD, Dip. American  
+Board (AP &amp; Hempath)  
+Ext.4879  
+Consultant Haematologist  
+Professor of Pathology  
+MBBS,MCPS,FCPS  
+Ext.3820  
+Dr.Shawana Shahid  
+Consultant Hematologist  
+MBBS, FCPS  
+Assistant Professor of  
+Pathology,SCM  
+Section Head Cytogenetics  
+Laboratory Dr.Fatima Zahra Assistant Consultant Hematology MBBS, FCPS  
+Dr.Maryam Habib  
+Consultant Hematologist  
+MBBS, FCPS (Hematology)  
+Assistant Professor of  
+Pathology Dr.Umbreen Hashim Associate consultant Hematologist MBBS, FCPS, MS  
+(Transfusion medicine)  
+Ext: 4913
+
+--- Chunk 11 ---
+source=File (6).pdf | date=None | type=markdown_chunk
+## HAEMATOLOGY  
+| Test                       |   Result | Unit     | Normal Range                               |
+|----------------------------|----------|----------|--------------------------------------------|
+| CBC                        |          |          |                                            |
+| Hemoglobin (Hb%)           |     11.9 | g/dl     | M: 13.517.5,F: 11.5  14.0 CH 12.0  16.0 |
+| White Blood Cell (WBC/TLC) |     6200 | / cu mm  | 4000  11000                               |
+| Red Blood Cell (RBC)       |      4.1 | *10^12/l | 4.5  6.5                                  |
+| Platelets Count            |   232000 | /cu mm   | 150000  400000                            |
+| Hematocrit (HCT)           |     35.3 | %        | 40.0  52.0                                |
+| Mean Cell Volume (MCV)     |     85.2 | fl       | 75.0  100.0                               |
+| Mean Cell Hemoglobin (MCH) |     28.8 | pg       | 25.0  35.0                                |
+| Mean Cell Hb Conc (MCHC)   |     33.8 | g/dl     | 31.0  38.0                                |
+| Neutrophils                |       56 | %        | 40  75                                    |
+| Lymphocytes                |       34 | %        | 20  50                                    |
+| Monocytes                  |       06 | %        | 2  10                                     |
+| Eosinophil                 |       04 | %        | 1  6                                      |  
+<!-- image -->  
+PATHOLOGIST Dr.GhulamShabbir  
+M.B.B.S. (Pb) D.C.Path. (Pb) Ex.Demonstrator,PathologyPunjabMedicalCollege,Faisalabad. Ex.PathologistAlliedHospital,FaisalabadD.H.Q.Hospital,Chiniot Dr.SafdarAli M.Sc.M.Phil.,Ph.D.(Biochemistry) Ex.Biochemist,K.E.MedicalCollege,Lahore.PunjabMedicalCollege,Faisalabad. ProfessorOfBiochemistry,SargodhaMedicalCollege,Sargodha.  
+<!-- image -->  
+<!-- image -->  
+TrackOnline  
+<!-- image -->
+
+--- Chunk 12 ---
+source=afp_ami.pdf | date=None | type=markdown_chunk
+## REFERENCE RANGE  
+For Male and Non-pregnant Female:&lt;=7.0 ng/mL pregnantfemales varies according to  
+Note: The reference range for thegestational stage.
+
+--- Chunk 13 ---
+source=File (2).pdf | date=None | type=markdown_chunk
+## HAEMATOLOGY  
+| Test                       |   Result | Unit      | Normal Range                   |
+|----------------------------|----------|-----------|--------------------------------|
+| CBC With ESR               |          |           |                                |
+| Haemoglobin                |     10.8 | g/dl      | M: 13.5  17.5, F: 11.5 14.0  |
+| ESR                        |       65 | mm/1st hr | 020                           |
+| White Blood Cell (WBC/TLC) |     5500 | / cu mm   | 4000  11000                   |
+| Red Blood Cell (RBC)       |      3.7 | *10^12/l  | 4.5  6.5                      |
+| Platelets Count            |   195000 | /cu mm    | 150000  400000                |
+| Hematocrit (HCT)           |     31.4 | %         | 40.0  52.0                    |
+| Mean Cell Volume (MCV)     |     85.1 | fl        | 76.0  96.0                    |
+| Mean Cell Hemoglobin (MCH) |     29.3 | pg        | 25.0  35.0                    |
+| Mean Cell Hb Conc (MCHC)   |     34.5 | g/dl      | 31.0  38.0                    |
+| Neutrophils                |       50 | %         | 40  75                        |
+| Lymphocytes                |       40 | %         | Adult: 25  40, Child: 45 70  |
+| Monocytes                  |        6 | %         | 2  10                         |
+| Eosinophils                |        4 | %         | Adult: 01  05, Child: 02  07 |  
+PATHOLOGIST Dr.GhulamShabbir  
+M.B.B.S.(Pb) D.C.Path.(Pb) Ex.Demonstrator,PathologyPunjabMedicalCollege,Faisalabad. Ex.PathologistAlliedHospital,FaisalabadD.H.Q.Hospital,Chiniot Dr.SafdarAli M.Sc.M.Phil., Ph.D.(Biochemistry) Ex.Biochemist,K.E.MedicalCollege,Lahore.PunjabMedicalCollege,Faisalabad. ProfessorOfBiochemistry,SargodhaMedicalCollege,Sargodha.  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+TrackOnline
+
+--- Chunk 14 ---
+source=hep_b_pcr_ami.pdf | date=None | type=markdown_chunk
+## RESULTS  
+Not Detected  
+The above testing is performed on fully automated sample preparation (nucleic acid extraction and purification) followed by PCR amplification and detection systems (Cobas 6800/4800) of Roche.  
+| Cobas HBV           | Result Interpretation                                                                                                                                                                      |
+|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Target Not Detected | HBV DNA not detected.                                                                                                                                                                      |
+| < Titer Min         | Calculated Titer is below the Lower Limit of Quantitation (LLoQ) of the assay. Report results as "HBV detected less than (Titer min)". Titer min = 1.00E+01 IU/mL = 10 IU/mL               |
+| Titer               | Report results as "(Titer) of HBV detected".                                                                                                                                               |
+| > Titer             | Calculated Titer is above the Upper Limit of Quantitation (ULoQ) of the assay. Report results as "HBV detected greater than (Titer max)". Titer max = 1.00E+09 IU/mL = 1,000,000,000 IU/mL |
+
+--- Chunk 15 ---
+source=crp_ami.pdf | date=None | type=markdown_chunk
+## OUT-PATIENT  
+26063061  
+Mrs. Naseem Zahra  
+63 Yrs 04 Months 16 Days /Female  
+Dr. Muhammad Ashraf  - 16V  
+Ordered On.......  
+16/05/2026 12:28  
+Age/Gender.......  
+Patient...............  
+:  
+: Specimen No.....  
+26010242300  
+:  
+MR No...............  
+Ordered By........  
+16/05/2026 13:51  
+Verified On.......  
+:  
+Received in Lab.  
+16/05/2026 12:46  
+:  
+:  
+:  
+:  
+Shifa Hospital Lab  
+TEST  
+RESULTS  
+REFERENCE RANGE  
+HISTORY  
+CRP-High Sensitivity....................  
+3.81  
+mg/L  
+upto 5.0 mg/L
+
+--- Chunk 16 ---
+source=ami_afb_smear.pdf | date=None | type=markdown_chunk
+## Microbiology  
+TEST
+
+--- Chunk 17 ---
+source=ami_gram_stain.pdf | date=None | type=markdown_chunk
+## Microbiology  
+TEST
+
+--- Chunk 18 ---
+source=PT_ami.pdf | date=None | type=markdown_chunk
+## Hematology - Out Patient: -  
+26-06-30-61  
+MR No-------  
+Mrs. Naseem Zahra  
+Specimen On---  
+Order By-------  
+Dr. Jamshaid Anwar  - 1XI  
+03/06/2026  
+Order On------  
+26420024124  
+Patient--------  
+Age/Gender----  
+63 Yrs 05 Months 02 Days /Femal  
+Received in Lab 03/06/2026 17:55  
+Verified On----  
+03/06/2026 18:30:08  
+| TEST                                     | RESULTS   | HISTORY   | REFERENCE RANGE   |
+|------------------------------------------|-----------|-----------|-------------------|
+| HC01-PT ( Prothrombin Time)              | 03/06/26  |           |                   |
+| Prothrombin Time........................ | 10.70 Sec |           | (9.5 - 11.7) Sec  |
+| INR..................................... | 0.99      |           | (0.8 - 1.3)       |
+
+--- Chunk 19 ---
+source=lft_ami.pdf | date=None | type=markdown_chunk
+## OUT-PATIENT  
+26-06-30-61  
+Mrs. Naseem Zahra  
+63 Yrs 5 Months 11 Days  
+Dr. Muhammad Ashraf  - 16V  
+Ordered On.......  
+16/05/2026 00:00  
+Age/Gender.......  
+Patient...............  
+:  
+: Specimen No.....  
+26-010242300  
+MR No...............  
+Ordered By........  
+16/05/2026 13:51  
+Verified On.......  
+:  
+:  
+:  
+:  
+Received in Lab.  
+16/05/2026 12:46  
+| TEST                 |   RESULTS | RESULTS   | History   |                                                                               |
+|----------------------|-----------|-----------|-----------|-------------------------------------------------------------------------------|
+| SGOT(AST)            |        36 | U/L       |           | Male:upto 50 U/L Female:upto 35 U/L                                           |
+| SGPT (ALT)           |        33 | U/L       |           | Male:upto 50 U/L Female:upto 35 U/L                                           |
+| Alkaline Phosphatase |       141 | U/L       |           | Adult: 40-130 U/L Children: 1-10 Years upto 335 U/L 11-15 Years upto 468 U/L  |
+| Total Bilirubin      |      0.43 | mg/dL     |           | Adult upto 1.2 mg/dL Neonatal: 0-2 Days 2.0-7.0 mg/dL 3-5 Days 4.0-12.0 mg/dL |
+| Direct Bilirubin     |      0.22 | mg/dL     |           | Upto 0.30 mg/dL                                                               |
+| Gamma G.T.           |        47 | U/L       |           | Male:upto 60 U/L Female:upto 40 U/L                                           |  
+SENIOR TECHNOLOGIST : Umar Ghani (32351)  
+Dr.Ghazanfar Abbas Consultant Chemical Pathologist Assistant Professor of Pathology Dr.Muhammad Aamir Consultant Chemical Pathologist Professor of Pathology MBBS,CHPE,FCPS  
+P A T H O L O G Y
+
+--- Chunk 20 ---
+source=urine_re_ami.pdf | date=None | type=markdown_chunk
+## OUT-PATIENT
+================================================================================
+
+Answer:
+Here are the **ABNORMAL** test results flagged from the provided lab reports:
+
+---
+
+### **1. Alkaline Phosphatase**
+- **Result:** 356 U/L  
+- **Reference Range:** Adult < 270 U/L  
+- **Source:** File (5).pdf, File (3).pdf, File (4).pdf  
+- **Explanation:** Alkaline Phosphatase is an enzyme related to the liver, bones, and other tissues. Elevated levels may indicate liver disease, bone disorders, or other conditions.
+
+---
+
+### **2. Hemoglobin (Hb%)**
+- **Result:** 10.8 g/dl  
+- **Reference Range:** Female: 11.5 - 14.0 g/dl  
+- **Source:** File (2).pdf  
+- **Explanation:** Hemoglobin is a protein in red blood cells that carries oxygen. Low levels indicate anemia or other underlying conditions.
+
+---
+
+### **3. ESR (Erythrocyte Sedimentation Rate)**
+- **Result:** 65 mm/1st hr  
+- **Reference Range:** 0 - 20 mm/1st hr  
+- **Source:** File (2).pdf  
+- **Explanation:** ESR measures inflammation in the body. Elevated levels suggest an inflammatory or infectious process.
+
+---
+
+### **4. Red Blood Cell (RBC) Count**
+- **Result:** 3.7 *10^12/l  
+- **Reference Range:** 4.5 - 6.5 *10^12/l  
+- **Source:** File (2).pdf  
+- **Explanation:** RBC count measures the number of red blood cells. Low levels indicate anemia or other blood-related issues.
+
+---
+
+### **5. Hematocrit (HCT)**
+- **Result:** 31.4%  
+- **Reference Range:** 40.0 - 52.0%  
+- **Source:** File (2).pdf  
+- **Explanation:** Hematocrit measures the proportion of red blood cells in the blood. Low levels suggest anemia or blood loss.
+
+---
+
+### **6. Alkaline Phosphatase (LFT)**
+- **Result:** 141 U/L  
+- **Reference Range:** Adult: 40 - 130 U/L  
+- **Source:** lft_ami.pdf  
+- **Explanation:** Elevated levels may indicate liver or bone disorders.
+
+---
+
+### **7. SGOT (AST)**
+- **Result:** 36 U/L  
+- **Reference Range:** Female: up to 35 U/L  
+- **Source:** lft_ami.pdf  
+- **Explanation:** SGOT is an enzyme found in the liver and heart. Slight elevation may indicate liver or heart issues.
+
+---
+
+### **8. Gamma G.T.**
+- **Result:** 47 U/L  
+- **Reference Range:** Female: up to 40 U/L  
+- **Source:** lft_ami.pdf  
+- **Explanation:** Gamma G.T. is an enzyme related to liver function. Elevated levels may indicate liver disease or bile duct issues.
+
+---
+
+### **9. Pus Cells (Urine C/E)**
+- **Result:** 12  
+- **Reference Range:** Not provided (but typically 0-5 is considered normal)  
+- **Source:** File.pdf  
+- **Explanation:** Elevated pus cells in urine suggest a possible urinary tract infection (UTI) or inflammation.
+
+---
+
+These are the flagged abnormal results based on the provided reference ranges.
+
+[prompt=5295 | completion=713 | total=6008 | cost=$0.020368 | session=6008 tokens $0.020368]
+Question: did ESR improve or worsen over time
+
+================================================================================
+DEBUG | Question: did ESR improve or worsen over time | Chunks: 20
+================================================================================
+
+--- Chunk 1 ---
+source=IMG_20260613_155835.pdf | date=None | type=markdown_chunk
+## Department of Hematology  
+Erythrocyte Sedimentation Rate (ESR)  
+Dr. N. A. Malik MBBS (Pb) , M. Phil. Consultant Haematologist Dr. Ayisha Imran MBBS , FCPS  
+Consultant Haematologist  
+info@chughtailab.com  
+Registration Location:  
+Jhang Road, Chiniot Registration Date:  
+27-Apr-2026 09:55  
+<!-- image -->  
+Reference: Blue Card - Counter 20% Consultant:  
+.DR ABDUL REHMAN  
+Dr. M. Dilawar Khan MBBS ,MCPS ,FCPS.  
+Consultant Chemical Pathologist Case Number: 56401-25-16591909 Patient Number:  
+<!-- image -->  
+56407-27-04  
+<!-- image -->  
+Reporting DateTime:  
+27-Apr-2026 19:45  
+Collection DateTime:  
+27-Apr-2026 09:55  
+<!-- image -->  
+Normal (=15)  
+Dr.Mubashar Razzaq Khan Consultant Pathologist  
+Dr. Omar Chughtai MBBS ,MD, FCAP Diplomate American Board of Anatomic and Clinical Pathology Consultant Pathologist Dr. A . S. Chughtai MBBS , MIAC , M.Phil., FCPS , FRC PathConsultant Pathologist www.chughtailab.com  
+51 mm/hour  
+High  
+High (&gt;15)  
+<!-- image -->  
+Patient Detail: Nasim Zahra . Age/Sex : 60 (Y) / F  
+Note :  
+, , ,
+
+--- Chunk 2 ---
+source=IMG_20260613_155848.pdf | date=None | type=markdown_chunk
+## Department of Hematology  
+Erythrocyte Sedimentation Rate (ESR)  
+Dr. N. A. Malik MBBS (Pb) , M. Phil. Consultant Haematologist Dr. Ayisha Imran MBBS , FCPS  
+Consultant Haematologist  
+info@chughtailab.com  
+Registration Location:  
+Jhang Road, Chiniot Registration Date:  
+27-Apr-2026 09:55  
+<!-- image -->  
+Reference: Blue Card - Counter 20% Consultant:  
+.DR ABDUL REHMAN  
+Dr. M. Dilawar Khan MBBS ,MCPS ,FCPS.  
+Consultant Chemical Pathologist Case Number: 56401-25-16591909 Patient Number:  
+<!-- image -->  
+56407-27-04  
+<!-- image -->  
+Reporting DateTime:  
+27-Apr-2026 19:45  
+Collection DateTime:  
+27-Apr-2026 09:55  
+<!-- image -->  
+Normal (=15)  
+Dr.Mubashar Razzaq Khan Consultant Pathologist  
+Dr. Omar Chughtai MBBS ,MD, FCAP Diplomate American Board of Anatomic and Clinical Pathology Consultant Pathologist Dr. A . S. Chughtai MBBS , MIAC , M.Phil., FCPS , FRC PathConsultant Pathologist www.chughtailab.com  
+51 mm/hour  
+High  
+High (&gt;15)  
+<!-- image -->  
+Patient Detail: Nasim Zahra . Age/Sex : 60 (Y) / F  
+Note :  
+, , ,
+
+--- Chunk 3 ---
+source=IMG_20260613_155904.pdf | date=None | type=markdown_chunk
+## Department of Hematology  
+Erythrocyte Sedimentation Rate (ESR)  
+Dr. N. A. Malik MBBS (Pb) , M. Phil. Consultant Haematologist Dr. Ayisha Imran MBBS , FCPS  
+Consultant Haematologist  
+info@chughtailab.com  
+Registration Location:  
+Jhang Road, Chiniot Registration Date:  
+27-Apr-2026 09:55  
+<!-- image -->  
+Reference: Blue Card - Counter 20% Consultant:  
+.DR ABDUL REHMAN  
+Dr. M. Dilawar Khan MBBS ,MCPS ,FCPS.  
+Consultant Chemical Pathologist Case Number: 56401-25-16591909 Patient Number:  
+<!-- image -->  
+56407-27-04  
+<!-- image -->  
+Reporting DateTime:  
+27-Apr-2026 19:45  
+Collection DateTime:  
+27-Apr-2026 09:55  
+<!-- image -->  
+Normal (=15)  
+Dr.Mubashar Razzaq Khan Consultant Pathologist  
+Dr. Omar Chughtai MBBS ,MD, FCAP Diplomate American Board of Anatomic and Clinical Pathology Consultant Pathologist Dr. A . S. Chughtai MBBS , MIAC , M.Phil., FCPS , FRC PathConsultant Pathologist www.chughtailab.com  
+51 mm/hour  
+High  
+High (&gt;15)  
+<!-- image -->  
+Patient Detail: Nasim Zahra . Age/Sex : 60 (Y) / F  
+Note :  
+, , ,
+
+--- Chunk 4 ---
+source=IMG_20260613_154648.pdf | date=None | type=markdown_chunk
+## Department of Hematology  
+Reporting DateTime:  
+27-May-2025 00:18  
+Collection DateTime:  
+26-May-2025 18:09  
+ESR  
+41 mm/1st H  
+High  
+High (&gt;15)  
+Normal (=15)  
+(56436-26-05)  
+26/05/2025  
+34  
+38  
+42  
+46  
+41  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Reference: Blue Card - Counter 20% Consultant:  
+DR NAJAF ALI PASHA  
+Case Number: 56401-25-16591909 Patient Number:  
+56436-26-05  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Patient Detail:  
+Nasim Zahra .  
+Age/Sex :  
+60 (Y) / F  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Note :  
+, , ,
+
+--- Chunk 5 ---
+source=IMG_20260613_154810.pdf | date=None | type=markdown_chunk
+## Department of Hematology  
+Reporting DateTime:  
+27-May-2025 00:18  
+Collection DateTime:  
+26-May-2025 18:09  
+ESR  
+41 mm/1st H  
+High  
+High (&gt;15)  
+Normal (=15)  
+(56436-26-05)  
+26/05/2025  
+34  
+38  
+42  
+46  
+41  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Reference: Blue Card - Counter 20% Consultant:  
+DR NAJAF ALI PASHA  
+Case Number: 56401-25-16591909 Patient Number:  
+56436-26-05  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Patient Detail:  
+Nasim Zahra .  
+Age/Sex :  
+60 (Y) / F  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Note :  
+, , ,
+
+--- Chunk 6 ---
+source=IMG_20260613_154838.pdf | date=None | type=markdown_chunk
+## Department of Hematology  
+Reporting DateTime:  
+27-May-2025 00:18  
+Collection DateTime:  
+26-May-2025 18:09  
+ESR  
+41 mm/1st H  
+High  
+High (&gt;15)  
+Normal (=15)  
+(56436-26-05)  
+26/05/2025  
+34  
+38  
+42  
+46  
+41  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Reference: Blue Card - Counter 20% Consultant:  
+DR NAJAF ALI PASHA  
+Case Number: 56401-25-16591909 Patient Number:  
+56436-26-05  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Patient Detail:  
+Nasim Zahra .  
+Age/Sex :  
+60 (Y) / F  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Note :  
+, , ,
+
+--- Chunk 7 ---
+source=IMG_20260613_154856.pdf | date=None | type=markdown_chunk
+## Department of Hematology  
+Reporting DateTime:  
+27-May-2025 00:18  
+Collection DateTime:  
+26-May-2025 18:09  
+ESR  
+41 mm/1st H  
+High  
+High (&gt;15)  
+Normal (=15)  
+(56436-26-05)  
+26/05/2025  
+34  
+38  
+42  
+46  
+41  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Reference: Blue Card - Counter 20% Consultant:  
+DR NAJAF ALI PASHA  
+Case Number: 56401-25-16591909 Patient Number:  
+56436-26-05  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Patient Detail:  
+Nasim Zahra .  
+Age/Sex :  
+60 (Y) / F  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Note :  
+, , ,
+
+--- Chunk 8 ---
+source=IMG_20260613_161037.pdf | date=None | type=markdown_chunk
+## Department of Hematology  
+Reporting DateTime:  
+27-May-2025 00:18  
+Collection DateTime:  
+26-May-2025 18:09  
+ESR  
+41 mm/1st H  
+High  
+High (&gt;15)  
+Normal (=15)  
+(56436-26-05)  
+26/05/2025  
+34  
+38  
+42  
+46  
+41  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Reference: Blue Card - Counter 20% Consultant:  
+DR NAJAF ALI PASHA  
+Case Number: 56401-25-16591909 Patient Number:  
+56436-26-05  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Patient Detail:  
+Nasim Zahra .  
+Age/Sex :  
+60 (Y) / F  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Note :  
+, , ,
+
+--- Chunk 9 ---
+source=IMG_20260613_161120.pdf | date=None | type=markdown_chunk
+## Department of Hematology  
+Reporting DateTime:  
+27-May-2025 00:18  
+Collection DateTime:  
+26-May-2025 18:09  
+ESR  
+41 mm/1st H  
+High  
+High (&gt;15)  
+Normal (=15)  
+(56436-26-05)  
+26/05/2025  
+34  
+38  
+42  
+46  
+41  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Reference: Blue Card - Counter 20% Consultant:  
+DR NAJAF ALI PASHA  
+Case Number: 56401-25-16591909 Patient Number:  
+56436-26-05  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Patient Detail:  
+Nasim Zahra .  
+Age/Sex :  
+60 (Y) / F  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Note :  
+, , ,
+
+--- Chunk 10 ---
+source=IMG_20260613_154705.pdf | date=None | type=markdown_chunk
+## Department of Hematology  
+Reporting DateTime:  
+27-May-2025 00:18  
+Collection DateTime:  
+26-May-2025 18:09  
+ESR  
+41 mm/1st H  
+High  
+High (&gt;15)  
+Normal (=15)  
+(56436-26-05)  
+26/05/2025  
+34  
+38  
+42  
+46  
+41  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Reference: Blue Card - Counter 20% Consultant:  
+DR NAJAF ALI PASHA  
+Case Number: 56401-25-16591909 Patient Number:  
+56436-26-05  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Patient Detail:  
+Nasim Zahra .  
+Age/Sex :  
+60 (Y) / F  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Note :  
+, , ,
+
+--- Chunk 11 ---
+source=IMG_20260613_154823.pdf | date=None | type=markdown_chunk
+## Department of Hematology  
+Reporting DateTime:  
+27-May-2025 00:18  
+Collection DateTime:  
+26-May-2025 18:09  
+ESR  
+41 mm/1st H  
+High  
+High (&gt;15)  
+Normal (=15)  
+(56436-26-05)  
+26/05/2025  
+34  
+38  
+42  
+46  
+41  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Reference: Blue Card - Counter 20% Consultant:  
+DR NAJAF ALI PASHA  
+Case Number: 56401-25-16591909 Patient Number:  
+56436-26-05  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+Patient Detail:  
+Nasim Zahra .  
+Age/Sex :  
+60 (Y) / F  
+Registration Location:  
+Jhang Road, Chiniot  
+Registration Date:  
+26-May-2025 18:09  
+Note :  
+, , ,
+
+--- Chunk 12 ---
+source=esr_ami.pdf | date=None | type=markdown_chunk
+## Hematology  
+TEST  
+HM10-ESR  
+ESR (Westergren)........................  
+HISTORY  
+mm/h  
+(0 - 20) mm/hour  
+TECHNOLOGIST : Abdullah Abrar Ahmad (32531)  
+TECHNOLOGIST : Abdullah Abrar Ahmad (32531)  
+Dr.Imran N. Ahmad  
+Director Labs (Enterprise) Consultant Pathologist Professor of Pathology MBBS,MD, Dip. American Board (AP &amp; Hempath) Ext.4879  
+Dr.Umbreen Hashim  
+Associate consultant Hematologist MBBS, FCPS, MS (Transfusion  
+medicine) Ext: 4913  
+Dr.Ayesha Junaid  
+Consultant Haematologist Professor of Pathology MBBS,MCPS,FCPS Ext.3820  
+Dr.Shawana Shahid  
+Consultant Hematologist MBBS, FCPS Assistant Professor of Pathology,SCM Section Head Cytogenetics Laboratory Ext: 4326  
+Dr.Fatima Zahra  
+Assistant Consultant Hematology MBBS, FCPS  
+Dr.Maryam Habib  
+Consultant Hematologist MBBS, FCPS (Hematology) Assistant Professor of Pathology
+
+--- Chunk 13 ---
+source=File (2).pdf | date=None | type=markdown_chunk
+## HAEMATOLOGY  
+| Test                       |   Result | Unit      | Normal Range                   |
+|----------------------------|----------|-----------|--------------------------------|
+| CBC With ESR               |          |           |                                |
+| Haemoglobin                |     10.8 | g/dl      | M: 13.5  17.5, F: 11.5 14.0  |
+| ESR                        |       65 | mm/1st hr | 020                           |
+| White Blood Cell (WBC/TLC) |     5500 | / cu mm   | 4000  11000                   |
+| Red Blood Cell (RBC)       |      3.7 | *10^12/l  | 4.5  6.5                      |
+| Platelets Count            |   195000 | /cu mm    | 150000  400000                |
+| Hematocrit (HCT)           |     31.4 | %         | 40.0  52.0                    |
+| Mean Cell Volume (MCV)     |     85.1 | fl        | 76.0  96.0                    |
+| Mean Cell Hemoglobin (MCH) |     29.3 | pg        | 25.0  35.0                    |
+| Mean Cell Hb Conc (MCHC)   |     34.5 | g/dl      | 31.0  38.0                    |
+| Neutrophils                |       50 | %         | 40  75                        |
+| Lymphocytes                |       40 | %         | Adult: 25  40, Child: 45 70  |
+| Monocytes                  |        6 | %         | 2  10                         |
+| Eosinophils                |        4 | %         | Adult: 01  05, Child: 02  07 |  
+PATHOLOGIST Dr.GhulamShabbir  
+M.B.B.S.(Pb) D.C.Path.(Pb) Ex.Demonstrator,PathologyPunjabMedicalCollege,Faisalabad. Ex.PathologistAlliedHospital,FaisalabadD.H.Q.Hospital,Chiniot Dr.SafdarAli M.Sc.M.Phil., Ph.D.(Biochemistry) Ex.Biochemist,K.E.MedicalCollege,Lahore.PunjabMedicalCollege,Faisalabad. ProfessorOfBiochemistry,SargodhaMedicalCollege,Sargodha.  
+<!-- image -->  
+<!-- image -->  
+<!-- image -->  
+TrackOnline
+
+--- Chunk 14 ---
+source=hcv_ami.pdf | date=None | type=markdown_chunk
+## History  
+Non Reactive &lt; 0.90 S/Co  
+Borderline   0.90-0.99 S/Co  
+Reactive     &gt;= 1.0 S/Co
+
+--- Chunk 15 ---
+source=creatinine_ami.pdf | date=None | type=markdown_chunk
+## Note:  
+* The eGFR is calculated by using IDMS (Isotope dilution mass spectrometry) traceable serum creatinine, patient's age and gender as per CKD-EPI (PK) equation which has been validated for adults 18 to 70 years of age.
+*  Please  note  eGFR  is  an  estimated  lab  value.  For  individual  and  precise  eGFR,  refer  to  your  treating physician.  
+Reference: Estimation of GFR in South Asians: A Study From the General Population in Pakistan. Am J Kidney Dis. 2014 Jan; 63(1): 49-58.  
+TECHNOLOGIST : Muhammad Naveed (29449)  
+Dr.Ghazanfar Abbas Dr.Muhammad Aamir  
+Consultant Chemical Pathologist Assistant Professor of Pathology MBBS, FCPS. Ext.3640  
+Consultant Chemical Pathologist Professor of Pathology MBBS,CHPE,FCPS Ext: 3765
+
+--- Chunk 16 ---
+source=ami_mri.pdf | date=None | type=markdown_chunk
+## IMPRESSION:  
+- Enhancing marrow signals in L5, S1 and S2 vertebral bodies.  Multiloculated peripherally enhancing intraosseous collection  in  L5  vertebral  body  along  with  its  mild  posterior  wedging  and  bulging  ,  compressing  the  thecal  sac resulting in moderate spinal canal stenosis, small prevertebral and a tiny pocket of enhancing collections along with focal thickening and enhancement of dura, enhancement also extending along the bilateral lateral recesses and neural  foramina  at  L5-S1  intervertebral  disc.    Lobulated  peripherally  enhancing  collection  involving  the  L5-S1 intervertebral  disc  extending  into  the  S1  vertebral  body.Bilateral  psoas  muscles  are  unremarkable.  Findings  are suggestive of spondylo-discitis.  
+-OPD-  
+<!-- image -->  
+Accession# :2606011264  
+MR# : 26063061  
+Name :NASEEM ZAHRA - Female 63 Y  
+Service :Lumber Spine With Contrast (01205)  
+Perform By :Abaidullah  @ 02/06/2026 01:07  
+Order By :Muhammad Ashraf  @ 01/06/2026 23:13  
+<!-- image -->  
+Reviewed By Dr. Asma Asghar  
+Dr. Kaneez Fatima Butt  
+Reported By  
+- Multilevel mild disc degenerative disease in the lumbar spine.
+
+--- Chunk 17 ---
+source=ami_mri.pdf | date=None | type=markdown_chunk
+## HISTORY:  
+Complains of B/L hip pain radiating to B/L Legs,Low grade fever on and off -2 months ,Known case of HTN ,HCV Infection-treated ,previously quatiferon gold was positive outside on 12-june 2025.
+
+--- Chunk 18 ---
+source=ana_ami.pdf | date=None | type=markdown_chunk
+## Comments :  
+ANA result: Positive  
+Screening dilution: 1:100  
+Pattern: Fine speckled (Classical pattern)  
+ICAP no.: AC-04  
+Titre:100 (Low level ANA)  
+Fine speckled pattern is associated with Sjogren syndrome, SLE, subacute cutaneous lupus erythematosus, systemic sclerosis (SSc), and SSc-inflammatory myopathy overlap syndrome.  
+ANA (Test method: indirect IF. Screening dilution: 1:100. Antigens: Hep-2 cells)  
+PGY-IV (IMMUNOLOGY) : Dr. Farva Jalil (27754)  
+CONSULTANT : Dr. Tahir Aziz Ahmed (1FD)  
+Dr.Imran N. Ahmad  
+Dr.Tahir Aziz Ahmed  
+Dr.Shafain Sheikh  
+Director Labs (Enterprise) Consultant Pathologist Professor of Pathology MBBS,MD, Dip. American Board (AP &amp; Hempath)  
+Ext.4879  
+Consultant Immunologist Professor of Pathology MBBS,MCPS,FCPS,FRC Path(UK) Ext:4348  
+Assistant Consultant Immunologist MBBS, FCPS
+
+--- Chunk 19 ---
+source=crp_ami.pdf | date=None | type=markdown_chunk
+## Remarks:  
+* Different laboratories use different methodology for analyzing CRP so the results should not be compared with each other.  
+* Kindly note that above test is reported in mg/L. It is advised to check the units before comparing with results from other laboratories.  
+SENIOR TECHNOLOGIST : Umar Ghani (32351)  
+Dr.Ghazanfar Abbas Dr.Muhammad Aamir  
+Consultant Chemical Pathologist Assistant Professor of Pathology MBBS, FCPS. Ext.3640  
+Consultant Chemical Pathologist Professor of Pathology MBBS,CHPE,FCPS Ext: 3765
+
+--- Chunk 20 ---
+source=File.pdf | date=None | type=markdown_chunk
+## URINEC/E  
+| Test                    | Result   | Unit   | Normal Range   |
+|-------------------------|----------|--------|----------------|
+| URINE C/E               |          |        |                |
+| PH                      | 5.0      |        | Neutral        |
+| Physical Examination    |          |        |                |
+| Color                   | YELLOW   |        |               |
+| Turbidity               | CLEAR    |        |               |
+| Deposit                 | NIL      |        |               |
+| Specific Gravity        | 1.020    |        |               |
+| Chemical Examination    |          |        |                |
+| Protein                 | NIL      |        |               |
+| Glucose                 | NIL      |        |               |
+| Bilirubin               | NIL      |        |               |
+| Urobilirubin            | Normal   |        |               |
+| Blood                   | NIL      |        |                |
+| Microscopic Examination |          |        |                |
+| Pus Cells               | 12      |        |               |
+| Red Blood Cells         | NIL      |        |               |
+| Epithelial Cells        | NIL      |        |               |
+| Granular cast           | NIL      |        |               |
+| Bacteria                | NIL      |        |               |
+| Yeast Cells             | NIL      |        |               |
+| Calcium oxalate         | NIL      |        |               |
+| Uric Acid:              | RARE     |        |               |
+| Amorphous urates        | NIL      |        |               |
+================================================================================
+
+Answer:
+Based on the provided lab reports, the **Erythrocyte Sedimentation Rate (ESR)** results are as follows:
+
+1. **26-May-2025**: **41 mm/hour** (High; Reference Range: ≤15 mm/hour)  
+   - Source: IMG_20260613_154648.pdf, IMG_20260613_154810.pdf, IMG_20260613_154838.pdf, IMG_20260613_154856.pdf, IMG_20260613_161037.pdf, IMG_20260613_161120.pdf, IMG_20260613_154705.pdf, IMG_20260613_154823.pdf  
+
+2. **27-Apr-2026**: **51 mm/hour** (High; Reference Range: ≤15 mm/hour)  
+   - Source: IMG_20260613_155835.pdf, IMG_20260613_155848.pdf, IMG_20260613_155904.pdf  
+
+3. **File (2).pdf** (Date not specified): **65 mm/hour** (High; Reference Range: 0-20 mm/hour)  
+
+---
+
+### **Conclusion:**
+The ESR **worsened over time**, increasing from **41 mm/hour** in May 2025 to **51 mm/hour** in April 2026, and further to **65 mm/hour** in the unspecified report. Elevated ESR indicates increasing inflammation or an ongoing inflammatory process.
+
+[prompt=6405 | completion=296 | total=6701 | cost=$0.018973 | session=12709 tokens $0.039340]
+Question: ^C
+Exiting.
