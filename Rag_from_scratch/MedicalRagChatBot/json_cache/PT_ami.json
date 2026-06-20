@@ -1,0 +1,33 @@
+{
+  "report_date": "03/06/2026",
+  "collection_date": "03/06/2026",
+  "source_file": "PT_ami.pdf",
+  "sections": {
+    "Shifa International Hospital Ltd.": [
+      {
+        "test_name": "HC01-PT ( Prothrombin Time)",
+        "value": "03/06/26",
+        "unit": "",
+        "reference_range": "",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Prothrombin Time........................",
+        "value": "10.70 Sec",
+        "unit": "(9.5 - 11.7) Sec",
+        "reference_range": "",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "INR.....................................",
+        "value": "0.99",
+        "unit": "(0.8 - 1.3)",
+        "reference_range": "",
+        "flag": "",
+        "is_abnormal": false
+      }
+    ]
+  }
+}

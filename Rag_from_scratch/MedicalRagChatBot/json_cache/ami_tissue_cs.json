@@ -1,0 +1,18 @@
+{
+  "report_date": "",
+  "collection_date": "",
+  "source_file": "ami_tissue_cs.pdf",
+  "sections": {
+    "Culture & Sensitivity": [
+      {
+        "test_name": "Culture",
+        "value": "No Growth",
+        "unit": "",
+        "reference_range": "No Growth/Normal flora isolated",
+        "flag": "",
+        "is_abnormal": false,
+        "comment": "] GRAM STAIN Tissue C/S"
+      }
+    ]
+  }
+}

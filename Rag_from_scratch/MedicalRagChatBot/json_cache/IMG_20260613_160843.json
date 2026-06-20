@@ -1,14 +1,14 @@
 {
-  "report_date": "27-May-2025",
-  "collection_date": "26-May-2025",
-  "source_file": "IMG_20260613_154648.pdf",
+  "report_date": "05-Jun-2025",
+  "collection_date": "04-Jun-2025",
+  "source_file": "IMG_20260613_160843.pdf",
   "sections": {
     "Culture & Sensitivity": [
       {
-        "test_name": "Culture - BLOOD (AEROBIC )",
+        "test_name": "Culture - BLOOD (AEROBIC)",
         "value": "No Growth",
         "unit": "",
-        "reference_range": "No Growth/Normal flora isolated.",
+        "reference_range": "| Unit     |   56415-04-06 04 Jun 2025 14:13 |",
         "flag": "",
         "is_abnormal": false,
         "comment": "No Growth obtained after 5 days of incubation at 37°C. (BACT / ALERT SYSTEM)"

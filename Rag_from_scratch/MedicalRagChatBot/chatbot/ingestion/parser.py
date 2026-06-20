@@ -88,6 +88,7 @@ class PDFParser:
     def _extract(self, pdf_path: Path) -> dict:
         doc      = self.converter.convert(str(pdf_path)).document
         markdown = doc.export_to_markdown()
+        print("Extracted markdown:", markdown)  # debug print
         dates    = self._extract_all_dates(markdown)
 
         # -------------------------------------------------------------------------
@@ -124,13 +125,13 @@ class PDFParser:
         else:
             print("    (none)")
 
-        # ── Priority 1: Chart-based report (ESR etc) ───────────────────────────
-        if self._is_chart_report(markdown):
-            logger = logging.getLogger(__name__)
-            logger.info(f"Detected chart report: {pdf_path.name}")
-            data = self._parse_chart_report(markdown, pdf_path.name)
-            output["sections"].update(data["sections"])
-            return output
+        # # ── Priority 1: Chart-based report (ESR etc) ───────────────────────────
+        # if self._is_chart_report(markdown):
+        #     logger = logging.getLogger(__name__)
+        #     logger.info(f"Detected chart report: {pdf_path.name}")
+        #     data = self._parse_chart_report(markdown, pdf_path.name)
+        #     output["sections"].update(data["sections"])
+        #     return output
 
         # ── Check for free-text report FIRST ──────────────────────────────────
         if not doc.tables or self._is_free_text_report(markdown):
@@ -528,6 +529,7 @@ class PDFParser:
         "no organism",
         "sterile",
         "colony",
+        "fetoprotein"
     ]
 
 
@@ -537,11 +539,13 @@ class PDFParser:
         with no structured table.
         """
         text_lower = markdown.lower()
+        print("text_lower for free-text detection:", text_lower)  # debug print
         matches    = sum(
             1 for kw in self.FREE_TEXT_REPORT_KEYWORDS
             if kw in text_lower
         )
-        return matches >= 2
+        print(f"Free-text report keyword matches: {matches}")  # debug print
+        return matches >= 1
 
 
     def _parse_free_text_report(

@@ -1,0 +1,185 @@
+{
+  "report_date": "30-Apr-2026",
+  "collection_date": "30-Apr-2026",
+  "source_file": "IMG_20260613_155821.pdf",
+  "sections": {
+    "Department of Chemical Pathology": [
+      {
+        "test_name": "Colour:",
+        "value": "Yellow",
+        "unit": "Yellow",
+        "reference_range": "Yellow",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Turbidity/Deposit:",
+        "value": "Nil",
+        "unit": "Nil",
+        "reference_range": "Nil",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "SP Gravity",
+        "value": "1.015",
+        "unit": "1.005-1.030",
+        "reference_range": "1.005-1.030",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Sugar",
+        "value": "Nil",
+        "unit": "Nil",
+        "reference_range": "Nil",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "pH",
+        "value": "5.5",
+        "unit": "5.0-8.0",
+        "reference_range": "5.0-8.0",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Ketones",
+        "value": "Nil",
+        "unit": "Nil",
+        "reference_range": "Nil",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Leukocyte Estrases",
+        "value": "Nil",
+        "unit": "Nil",
+        "reference_range": "Nil",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Urobilinogen",
+        "value": "Normal",
+        "unit": "Normal",
+        "reference_range": "Normal",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Nitrite",
+        "value": "Negative",
+        "unit": "Negative",
+        "reference_range": "Negative",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Bilirubin",
+        "value": "Nil",
+        "unit": "Nil",
+        "reference_range": "Nil",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Proteins",
+        "value": "Nil",
+        "unit": "Nil",
+        "reference_range": "Nil",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Heamoglobin",
+        "value": "Nil",
+        "unit": "Nil",
+        "reference_range": "Nil",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Pus Cells",
+        "value": "0-5",
+        "unit": "/HPF",
+        "reference_range": "0-5",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Organisms",
+        "value": "Nil",
+        "unit": "/HPF",
+        "reference_range": "Nil",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Red Blood Cell",
+        "value": "0-2",
+        "unit": "/HPF",
+        "reference_range": "0-5",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Yeast Cells",
+        "value": "Nil",
+        "unit": "/HPF",
+        "reference_range": "Nil",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Epithelial Cells",
+        "value": "0-2",
+        "unit": "/HPF",
+        "reference_range": "0-5",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Dead Sperms",
+        "value": "Nil",
+        "unit": "/HPF",
+        "reference_range": "Nil",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Amorphous",
+        "value": "Nil",
+        "unit": "/HPF",
+        "reference_range": "Nil",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Misc",
+        "value": "Nil",
+        "unit": "/HPF",
+        "reference_range": "Nil",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Casts:",
+        "value": "Nil",
+        "unit": "/LPF",
+        "reference_range": "Nil",
+        "flag": "",
+        "is_abnormal": false
+      },
+      {
+        "test_name": "Crystals:",
+        "value": "Nil",
+        "unit": "/HPF",
+        "reference_range": "Nil",
+        "flag": "",
+        "is_abnormal": false
+      }
+    ]
+  }
+}
