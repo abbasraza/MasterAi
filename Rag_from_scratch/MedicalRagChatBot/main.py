@@ -2,6 +2,7 @@ import argparse
 import logging
 from pathlib import Path
 
+from chatbot import MedicalRAGChatbot
 from chatbot.pipeline import (
     setup_logging,
     flow_parse,
@@ -19,18 +20,18 @@ def build_arg_parser() -> argparse.ArgumentParser:
         formatter_class=argparse.RawTextHelpFormatter,
     )
 
-    parser.add_argument(
-        "mode",
-        choices=["parse", "embed", "ingest", "chat", "run", "debug"],
-        help=(
-            "parse   -> Stage 1: PDF to JSON\n"
-            "embed   -> Stage 2: JSON to ChromaDB\n"
-            "ingest  -> Stage 1+2: PDF to ChromaDB\n"
-            "chat    -> Stage 3: Chat\n"
-            "run     -> All stages\n"
-            "debug   -> Docling debug\n"
-        )
-    )
+    # parser.add_argument(
+    #     "mode",
+    #     choices=["parse", "embed", "ingest", "chat", "run", "debug"],
+    #     help=(
+    #         "parse   -> Stage 1: PDF to JSON\n"
+    #         "embed   -> Stage 2: JSON to ChromaDB\n"
+    #         "ingest  -> Stage 1+2: PDF to ChromaDB\n"
+    #         "chat    -> Stage 3: Chat\n"
+    #         "run     -> All stages\n"
+    #         "debug   -> Docling debug\n"
+    #     )
+    # )
 
     parser.add_argument(
         "--source",
@@ -68,54 +69,64 @@ def main():
     setup_logging()
     args = build_arg_parser().parse_args()
 
-    if args.mode == "parse":
-        result = flow_parse(
-            source_path = Path(args.source),
-            cache_dir   = Path(args.cache_dir),
-        )
-        print(f"\nDone: {result['parsed']} parsed, {result['skipped']} skipped")
+    #Medical rag chatbot initialize
+    chatbot = MedicalRAGChatbot(
+        source_path = Path(args.source),
+        # cache_dir   = Path(args.cache_dir),
+        persist_dir = args.persist_dir,
+        # session_id  = args.session_id,
+    )
+    # chatbot.logger.info(f"Mode: {args.mode}")
+    chatbot.chat(show_tokens=True)
+    
+    # if args.mode == "parse":
+    #     result = flow_parse(
+    #         source_path = Path(args.source),
+    #         cache_dir   = Path(args.cache_dir),
+    #     )
+    #     print(f"\nDone: {result['parsed']} parsed, {result['skipped']} skipped")
 
-    elif args.mode == "embed":
-        result = flow_embed(
-            cache_dir   = Path(args.cache_dir),
-            persist_dir = args.persist_dir,
-            force       = args.force,
-        )
-        print(f"\nDone: {result['total']} documents indexed")
+    # elif args.mode == "embed":
+    #     result = flow_embed(
+    #         cache_dir   = Path(args.cache_dir),
+    #         persist_dir = args.persist_dir,
+    #         force       = args.force,
+    #     )
+    #     print(f"\nDone: {result['total']} documents indexed")
 
-    elif args.mode == "ingest":
-        result = flow_ingest(
-            source_path = Path(args.source),
-            cache_dir   = Path(args.cache_dir),
-            persist_dir = args.persist_dir,
-            force       = args.force,
-        )
-        print(f"\nDone: {result}")
+    # elif args.mode == "ingest":
+    #     result = flow_ingest(
+    #         source_path = Path(args.source),
+    #         cache_dir   = Path(args.cache_dir),
+    #         persist_dir = args.persist_dir,
+    #         force       = args.force,
+    #     )
+    #     print(f"\nDone: {result}")
 
-    elif args.mode == "chat":
-        flow_chat(
-            persist_dir = args.persist_dir,
-            session_id  = args.session_id,
-        )
+    # elif args.mode == "chat":
+    #     flow_chat(
+    #         persist_dir = args.persist_dir,
+    #         session_id  = args.session_id,
+    #     )
 
-    elif args.mode == "run":
-        flow_run(
-            source_path = Path(args.source),
-            cache_dir   = Path(args.cache_dir),
-            persist_dir = args.persist_dir,
-            session_id  = args.session_id,
-            force       = args.force,
-        )
+    # elif args.mode == "run":
+    #     flow_run(
+    #         source_path = Path(args.source),
+    #         cache_dir   = Path(args.cache_dir),
+    #         persist_dir = args.persist_dir,
+    #         session_id  = args.session_id,
+    #         force       = args.force,
+    #     )
 
-    elif args.mode == "debug":
-        parser   = PDFParser(cache_dir=Path(args.cache_dir))
-        pdf_path = Path(args.source)
-        files    = (
-            [pdf_path] if pdf_path.is_file()
-            else sorted(pdf_path.rglob("*.pdf"))
-        )
-        for f in files:
-            parser.debug_document(f)
+    # elif args.mode == "debug":
+    #     parser   = PDFParser(cache_dir=Path(args.cache_dir))
+    #     pdf_path = Path(args.source)
+    #     files    = (
+    #         [pdf_path] if pdf_path.is_file()
+    #         else sorted(pdf_path.rglob("*.pdf"))
+    #     )
+    #     for f in files:
+    #         parser.debug_document(f)
 
 
 if __name__ == "__main__":

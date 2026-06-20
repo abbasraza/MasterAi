@@ -135,7 +135,7 @@ def pdf_to_structured_json(pdf_path):
 
 # ✅ Run script
 if __name__ == "__main__":
-    pdf_path = "/home/abbas/Downloads/Images-20260614T073049Z-3-001/Images/downloaded_pdfs/manually_downloaded/20260614103618570_6c38c284-a683-40b6-9c34-c9bfec06d15b.pdf"
+    pdf_path = "/home/abbas/Documents/IMG_20260613_154648.pdf"
 
     result = pdf_to_structured_json(pdf_path)
 

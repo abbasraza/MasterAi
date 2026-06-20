@@ -1,3 +1,4 @@
+import logging
 from pathlib import Path
 
 from langchain_community.callbacks  import get_openai_callback
@@ -12,6 +13,8 @@ from chatbot.retrieval.vector_store import VectorStoreManager
 from chatbot.retrieval.retriever    import SmartRetriever
 from chatbot.chain.prompt           import MEDICAL_PROMPT
 from chatbot.session.session        import SessionManager
+from chatbot.ingestion.converter    import PDFConverter
+from chatbot.ingestion.chunker      import MarkdownChunker
 
 import os
 import sys
@@ -84,6 +87,7 @@ class MedicalRAGChatbot:
         self.session_id      = session_id
         self.session_manager = SessionManager(max_messages=4)
         self.token_tracker   = TokenTracker()
+        self.logger          = logging.getLogger(__name__)
 
         config = load_config()
 
@@ -102,40 +106,59 @@ class MedicalRAGChatbot:
             temperature      = 0,
         )
 
-        vs_manager     = VectorStoreManager(embeddings, persist_dir)
-        self.retriever = SmartRetriever(vs_manager)
+        self.vs_manager     = VectorStoreManager(embeddings, persist_dir)
+        self.retriever = SmartRetriever(self.vs_manager)
 
-        self._index_if_needed(source_path, cache_dir, vs_manager)
+        self._index_if_needed(source_path)
         self.chain = self._build_chain()
 
     # -------------------------------------------------------------------------
 
-    def _index_if_needed(
-        self,
-        source_path: Path,
-        cache_dir:   Path,
-        vs_manager:  VectorStoreManager,
-    ):
-        if not vs_manager.is_empty():
-            print("Reusing existing Chroma store")
+    # def _index_if_needed(
+    #     self,
+    #     source_path: Path,
+    #     cache_dir:   Path,
+    #     vs_manager:  VectorStoreManager,
+    # ):
+    #     if not vs_manager.is_empty():
+    #         print("Reusing existing Chroma store")
+    #         return
+
+    #     parser    = PDFParser(cache_dir)
+    #     builder   = DocumentBuilder()
+    #     pdf_files = (
+    #         [source_path] if source_path.is_file()
+    #         else sorted(source_path.rglob("*.pdf"))
+    #     )
+
+    #     all_docs = []
+    #     for pdf_file in pdf_files:
+    #         report = parser.parse(pdf_file)
+    #         docs   = builder.build(report)
+    #         all_docs.extend(docs)
+    #         print(f"  {len(docs)} docs from {pdf_file.name}")
+
+    #     vs_manager.add(all_docs)
+    #     print(f"Indexed {len(all_docs)} documents total")
+
+    def _index_if_needed(self, source_path: Path):
+        if not self.vs_manager.is_empty():
+            self.logger.info(
+                f"Reusing store: {self.vs_manager.count()} docs"
+            )
             return
 
-        parser    = PDFParser(cache_dir)
-        builder   = DocumentBuilder()
-        pdf_files = (
-            [source_path] if source_path.is_file()
-            else sorted(source_path.rglob("*.pdf"))
-        )
+        converter = PDFConverter()
+        chunker   = MarkdownChunker()
 
-        all_docs = []
-        for pdf_file in pdf_files:
-            report = parser.parse(pdf_file)
-            docs   = builder.build(report)
-            all_docs.extend(docs)
-            print(f"  {len(docs)} docs from {pdf_file.name}")
+        self.logger.info("Converting PDFs to markdown...")
+        conversions = converter.convert_all(source_path)
 
-        vs_manager.add(all_docs)
-        print(f"Indexed {len(all_docs)} documents total")
+        self.logger.info("Chunking markdown...")
+        all_docs = chunker.chunk_all(conversions)
+
+        self.logger.info("Indexing into ChromaDB...")
+        self.vs_manager.add(all_docs)
 
     # -------------------------------------------------------------------------
 

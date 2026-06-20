@@ -26,4 +26,4 @@ def debug_spatial_extraction(pdf_path: str):
                 print(line_text)
 
 # Run it
-debug_spatial_extraction("/home/abbas/Downloads/Ami_fever_2026-20260612T142009Z-3-001/Ami_fever_2026/ami_gram_stain.pdf")
+debug_spatial_extraction("/home/abbas/Documents/IMG_20260613_154648.pdf")

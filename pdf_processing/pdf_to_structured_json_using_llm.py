@@ -79,18 +79,24 @@ def build_chain():
 if __name__ == "__main__":
     pdf_path = "/home/abbas/Downloads/Images-20260614T073049Z-3-001/Images/failed_downloads/pdfs/IMG_20260613_161253.pdf"
     pdf_path = "/home/abbas/Downloads/Images-20260614T073049Z-3-001/Images/downloaded_pdfs/manually_downloaded/20260614103618570_6c38c284-a683-40b6-9c34-c9bfec06d15b.pdf"
-
+    pdf_path = "/home/abbas/Documents/IMG_20260613_154648.pdf"
+    pdf_path = "/home/abbas/Downloads/Ami_fever_2026-20260612T142009Z-3-001/all_pdfs/IMG_20260613_155904.pdf"
     print("Loading PDF...")
     raw_text = load_pdf_text(pdf_path)
 
     # Optional safety (token limit)
     raw_text = raw_text[:15000]
 
+    print("Raw Text Extracted:")
+    print(raw_text)
+    
     print("Sending to LLM...")
     chain = build_chain()
 
     result = chain.invoke({"text": raw_text})
 
+    print("\n✅ Extraction Result:")
+    print(result)
     # Save JSON
     with open("structured_output.json", "w") as f:
         try:

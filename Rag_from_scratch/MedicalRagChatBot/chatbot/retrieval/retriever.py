@@ -17,18 +17,18 @@ class SmartRetriever:
 
         if any(w in q for w in self.ABNORMAL_WORDS):
             return self.vs.as_retriever(
-                search_kwargs={"k": 10, "filter": {"is_abnormal": True}}
+                search_kwargs={"k": 20}
             ).invoke(question)
 
-        if any(w in q for w in self.SUMMARY_WORDS):
-            return self.vs.as_retriever(
-                search_kwargs={"k": 5, "filter": {"doc_type": "report_summary"}}
-            ).invoke(question)
+        # if any(w in q for w in self.SUMMARY_WORDS):
+        #     return self.vs.as_retriever(
+        #         search_kwargs={"k": 5, "filter": {"doc_type": "report_summary"}}
+        #     ).invoke(question)
 
-        if any(w in q for w in self.DATE_WORDS):
-            return self.vs.as_retriever(
-                search_kwargs={"k": 5, "filter": {"doc_type": "report_summary"}}
-            ).invoke(question)
+        # if any(w in q for w in self.DATE_WORDS):
+        #     return self.vs.as_retriever(
+        #         search_kwargs={"k": 5, "filter": {"doc_type": "report_summary"}}
+        #     ).invoke(question)
 
         if any(w in q for w in self.TREND_WORDS):
             return self.vs.as_retriever(
@@ -36,7 +36,7 @@ class SmartRetriever:
             ).invoke(question)
 
         return self.vs.as_retriever(
-            search_kwargs={"k": 6, "filter": {"doc_type": "individual_test"}}
+            search_kwargs={"k": 6}
         ).invoke(question)
 
     def format(self, documents: list[Document]) -> str:
